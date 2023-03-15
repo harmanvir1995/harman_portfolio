@@ -38,31 +38,40 @@
           <div class="about-col-2">
             <h1 class="sub-title">About Me</h1>
             <p>
-              I am a results-driven DevOps Engineer with a Bachelor's degree in
-              Computer Science from Concordia University, Montreal. As a former
-              member of the Space Concordia organization, I gained experience
-              working collaboratively on complex projects with a team of
-              engineers. During my time as a DevOps intern, I honed my skills in
+              I am a DevOps Engineer with a Bachelor's degree in Computer
+              Science from Concordia University, Montreal. As a former member of
+              the Space Concordia organization, I gained experience working
+              collaboratively on complex projects with a team of engineers.
+              During my time as a DevOps intern, I honed my skills in
               automation, continuous integration and delivery, and cloud
               infrastructure management. I also gained experience working with
               tools such as Jenkins, Ansible, Docker, Kubernetes, AWS, and
-              Azure. <br />In addition to my technical skills, I am committed to
-              giving back to my community. I have volunteered my time at
-              Gurudwara Nanak Darbar, where I assisted with social work
-              initiatives. I also worked as a technician in the AITS department
-              at Concordia University, where I helped solve various tickets
-              related to networking and other computer-related problems.
-              <br />Overall, I am a dedicated and hardworking individual who is
+              DigitalOcean.
+            </p>
+            <p>
+              In addition to my technical skills, I am committed to giving back
+              to my community. I have volunteered my time at Gurudwara Nanak
+              Darbar, where I assisted with social work initiatives. I also
+              worked as a technician in the AITS department at Concordia
+              University, where I helped solve various tickets related to
+              networking and other computer-related problems.
+            </p>
+            <p>
+              Overall, I am a dedicated and hardworking individual who is
               passionate about DevOps and always eager to learn more. I thrive
               in fast-paced environments and am always looking for new
               challenges to tackle.
             </p>
             <div class="tab-titles">
-              <p class="tab-links active-links">Skills</p>
-              <p class="tab-links">Experience</p>
-              <p class="tab-links">Education</p>
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
             </div>
-            <div class="tab-contents active-links">
+            <div class="tab-contents active-tab" id="skills">
               <ul>
                 <li>
                   <span>Linux</span><br />Shell Scripting, Python, NGINX/Apache,
@@ -79,7 +88,7 @@
                 </li>
               </ul>
             </div>
-            <div class="tab-contents">
+            <div class="tab-contents" id="experience">
               <ul>
                 <li>
                   <span
@@ -99,7 +108,7 @@
                 </li>
               </ul>
             </div>
-            <div class="tab-contents active-links">
+            <div class="tab-contents" id="education">
               <ul>
                 <li>
                   <span
@@ -122,5 +131,19 @@
         </div>
       </div>
     </section>
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tablink.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
   </body>
 </html>
