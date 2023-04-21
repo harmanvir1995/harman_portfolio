@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <link href="style.css" rel="stylesheet" type="" />
     <title>Harmanvir Singh</title>
+    <script src="https://kit.fontawesome.com/bbe99c153f.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <!------------Header--------------->
@@ -62,6 +63,7 @@
               in fast-paced environments and am always looking for new
               challenges to tackle.
             </p>
+
             <div class="tab-titles">
               <p class="tab-links active-link" onclick="opentab('skills')">
                 Skills
@@ -71,6 +73,7 @@
               </p>
               <p class="tab-links" onclick="opentab('education')">Education</p>
             </div>
+
             <div class="tab-contents active-tab" id="skills">
               <ul>
                 <li>
@@ -88,6 +91,7 @@
                 </li>
               </ul>
             </div>
+
             <div class="tab-contents" id="experience">
               <ul>
                 <li>
@@ -108,11 +112,12 @@
                 </li>
               </ul>
             </div>
+
             <div class="tab-contents" id="education">
               <ul>
                 <li>
                   <span
-                    >Bachelors of Computer Science, Concordia University<br />(September,2020
+                    >Bachelors of Computer Science, Concordia University  <br/>(September,2020
                     - Current)</span
                   ><br />
                   Operating Systems, Web Programming, Object Oriented
@@ -122,28 +127,72 @@
                   Networks
                 </li>
                 <li>
-                  <span>High School, Punjab, India<br />(2012 - 2014)</span>
+                  <span>High School, Punjab, India <br/>(2012 - 2014)</span>
                   <br />Non-Medical, Mathematics, Physics, Chemistry
                 </li>
               </ul>
             </div>
+
           </div>
         </div>
       </div>
     </section>
+
+    <!----------------SERVICES------------------->
+    <section id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-infinity"></i>
+            <h2>DevOps Engineer</h2>
+            <p>Responsible for managing and maintaining the software development 
+              and deployment pipelines, monitoring systems, and infrastructure, and 
+              ensuring the smooth and efficient operation of the software applications and services.</p>
+            <a href="#">Learn more</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>System Adminstrator</h2>
+            <p>Ensure the smooth operation of computer systems, networks, and servers by monitoring performance, troubleshooting issues, and implementing security measures.</p>
+            <a href="#">Learn more</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-cloud"></i>
+            <h2>Cloud Engineer</h2>
+            <p>Responsible for designing, implementing, and maintaining cloud-based systems that support the needs of a business or organization.
+              They work with various cloud platforms such as AWS, Azure, and Google Cloud to ensure that the systems are secure, scalable, and highly available.</p>
+            <a href="#">Learn more</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!----------------Portfolio------------------->
+    <section id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        
+      </div>
+
+    </section>
+
     <script>
       var tablinks = document.getElementsByClassName("tab-links");
       var tabcontents = document.getElementsByClassName("tab-contents");
+
       function opentab(tabname) {
         for (tablink of tablinks) {
           tablink.classList.remove("active-link");
         }
         for (tabcontent of tabcontents) {
-          tablink.classList.remove("active-tab");
+          tabcontent.classList.remove("active-tab");
         }
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
       }
+
     </script>
   </body>
 </html>
